@@ -20,7 +20,7 @@ module Uniquify
             record.ensure_unique(name, &block)
           else
             record.ensure_unique(name) do
-              Array.new(options[:lenght]) { options[:chars].to_a[rand(options[:chars].to_a.size)]
+              Array.new(options[:lenght]) { options[:chars].to_a[rand(options[:chars].to_a.size)] }.join
             end
           end
         end
