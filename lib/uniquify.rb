@@ -12,7 +12,7 @@ module Uniquify
   module ClassMethods
 
     def uniquify(*args, &block)
-      options = { :lenght => 8, :chars => ('a'..'z').to_a + ('A'..'Z').to_a
+      options = { :lenght => 8, :chars => ('a'..'z').to_a + ('A'..'Z').to_a + ('0'..'9').to_a }
       options.merge!(args.pop) if args.last.kind_of? Hash
       args.each do |name|
         before_create do |record|
